@@ -22,7 +22,6 @@ class CreateBorrowersTable extends Migration
             $table->decimal('monthly_expenses', 12, 2)->nullable();
             $table->boolean('other_financing')->nullable();
             $table->decimal('other_financing_amount', 12, 2)->nullable();
-
             $table->string('legal_business_name')->nullable();
             $table->string('business_physical_address')->nullable();
             $table->string('business_physical_city')->nullable();

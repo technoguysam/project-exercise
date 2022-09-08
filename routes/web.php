@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('borrowers', [App\Http\Controllers\BorrowerController::class, 'index'])->name('borrowerlist');
+Route::get('borrower-create', [App\Http\Controllers\BorrowerController::class, 'create'])->name('borrowercreate');
+Route::POST('borrower-store', [App\Http\Controllers\BorrowerController::class, 'store'])->name('borrowerstore');
+Route::get('update-borrower/{id}', [App\Http\Controllers\BorrowerController::class, 'edit'])->name('updateborrower');
+Route::PUT('update-borrower/{id}', [App\Http\Controllers\BorrowerController::class, 'update'])->name('updateborrowers');
+Route::get('delete-borrower/{id}', [App\Http\Controllers\BorrowerController::class, 'destroy'])->name('deleteborrower');
